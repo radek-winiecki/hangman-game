@@ -5,7 +5,7 @@ let length = password.length;
 let password1 = "";
 
 for (i = 0; i < length; i++) {
-    if (password[i] === " ") {
+    if (password.charAt(i) === " ") {
         password1 = password1 + " ";
     } else {
         password1 = password1 + "-";
