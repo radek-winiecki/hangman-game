@@ -8,6 +8,7 @@ body {
     background-color: #000;
     color: lightgray;
     font-size: 28px;
+    font-family: Roboto, sans-serif;
 }
 
 #wrapper {
@@ -22,6 +23,7 @@ body {
     text-align: center;
     font-size: 48px;
     min-height: 60px;
+    letter-spacing: 2px;
 }
 
 #hangman {
