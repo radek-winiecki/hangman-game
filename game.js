@@ -80,12 +80,29 @@ String.prototype.setChar = function (place, character) {
 }
 
 function checkLetter(number) {
+
+    let hit_letter = false;
     // alert(number);
     for (i = 0; i < length; i++) {
         if (password.charAt(i) === letters[number]) {
             // alert(i);
             password1 = password1.setChar(i, letters[number]);
+            hit_letter = true;
         }
     }
-    write_password();
+    if (hit_letter === true) {
+        let element = "letter" + number;
+        document.getElementById(element).style.background = "#003300";
+        document.getElementById(element).style.color = "#00c000";
+        document.getElementById(element).style.border = "3px solid #00c000";
+        document.getElementById(element).style.cursor = "default";
+
+        write_password();
+    } else {
+        let element = "letter" + number;
+        document.getElementById(element).style.background = "#330000";
+        document.getElementById(element).style.color = "#c00000";
+        document.getElementById(element).style.border = "3px solid #c00000";
+        document.getElementById(element).style.cursor = "default";
+    }
 }
