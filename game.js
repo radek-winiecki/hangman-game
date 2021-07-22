@@ -58,7 +58,9 @@ letters[34] = "Ź";
 function start() {
     let div_content = "";
     for (i = 0; i <= 34; i++) {
-        div_content = div_content + '<div class="letter">' + letters[i] + '</div>';
+        let element = "letter" + i;
+
+        div_content = div_content + '<div class="letter" id="' + element + '">' + letters[i] + '</div>';
         if ((i + 1) % 7 === 0) {
             div_content = div_content + '<div style="clear:both;"></div>';
         }
