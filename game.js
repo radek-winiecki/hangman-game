@@ -60,7 +60,7 @@ function start() {
     for (i = 0; i <= 34; i++) {
         let element = "letter" + i;
 
-        div_content = div_content + '<div class="letter" id="' + element + '">' + letters[i] + '</div>';
+        div_content = div_content + '<div class="letter" onclick="checkLetter(' + i + ')" id="' + element + '">' + letters[i] + '</div>';
         if ((i + 1) % 7 === 0) {
             div_content = div_content + '<div style="clear:both;"></div>';
         }
@@ -69,4 +69,12 @@ function start() {
     document.getElementById("alphabet").innerHTML = div_content;
 
     write_password();
+}
+
+String.prototype.setChar = function (place, character) {
+    if (place > this.length - 1) {
+        return this.toString();
+    } else {
+        return this.substr(0, place) + character + this.substr(place + 1);
+    }
 }
