@@ -78,3 +78,14 @@ String.prototype.setChar = function (place, character) {
         return this.substr(0, place) + character + this.substr(place + 1);
     }
 }
+
+function checkLetter(number) {
+    // alert(number);
+    for (i = 0; i < length; i++) {
+        if (password.charAt(i) === letters[number]) {
+            // alert(i);
+            password1 = password1.setChar(i, letters[number]);
+        }
+    }
+    write_password();
+}
