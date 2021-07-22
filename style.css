@@ -12,13 +12,13 @@ body {
 }
 
 #wrapper {
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
 }
 
 #board {
-    width: 900px;
-    margin-top: 50px;
+    width: 1200px;
+    margin-top: 100px;
     margin-bottom: 50px;
     text-align: center;
     font-size: 48px;
@@ -27,14 +27,14 @@ body {
 
 #hangman {
     float: left;
-    width: 450px;
+    width: 600px;
     text-align: center;
     min-height: 280px;
 }
 
 #alphabet {
     float: left;
-    width: 450px;
+    width: 600px;
     text-align: center;
     min-height: 280px;
 }
