@@ -106,6 +106,7 @@ function checkLetter(number) {
         document.getElementById(element).style.color = "#c00000";
         document.getElementById(element).style.border = "3px solid #c00000";
         document.getElementById(element).style.cursor = "default";
+        document.getElementById(element).setAttribute("onclick", ";");
 
         // missed letters
         missed_letters++;
