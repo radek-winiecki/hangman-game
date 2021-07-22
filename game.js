@@ -4,6 +4,8 @@ password = password.toUpperCase();
 let length = password.length;
 let password1 = "";
 
+let missed_letters = 0;
+
 for (i = 0; i < length; i++) {
     if (password.charAt(i) === " ") {
         password1 = password1 + " ";
@@ -104,5 +106,11 @@ function checkLetter(number) {
         document.getElementById(element).style.color = "#c00000";
         document.getElementById(element).style.border = "3px solid #c00000";
         document.getElementById(element).style.cursor = "default";
+
+        // missed letters
+        missed_letters++;
+        let image = "img/s" + missed_letters + ".jpg";
+
+        document.getElementById("hangman").innerHTML = '<img src="' + image + '" alt="" />';
     }
 }
