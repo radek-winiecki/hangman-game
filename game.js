@@ -116,6 +116,11 @@ function checkLetter(number) {
     }
     // win
     if (password === password1) {
-        document.getElementById("alphabet").innerHTML = "Congratulations! You guessed the password: " + password + '<br/> <br/> <span class="reset" onclick="location.reload()">AGAIN?</span>';
+        document.getElementById("alphabet").innerHTML = "Congratulations! You guessed the password :) " + '<br/> <br/> <span class="reset" onclick="location.reload()">AGAIN?</span>';
+    }
+
+    // defeat
+    if (missed_letters >= 9) {
+        document.getElementById("alphabet").innerHTML = "You lost! The correct password: " + password + '<br/> <br/> <span class="reset" onclick="location.reload()">AGAIN?</span>';
     }
 }
