@@ -56,3 +56,13 @@ body {
     color: #fff;
     border: 3px solid #ffffff;
 }
+
+.reset {
+    color: green;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+.reset:hover {
+    color: white;
+}

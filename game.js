@@ -114,4 +114,8 @@ function checkLetter(number) {
 
         document.getElementById("hangman").innerHTML = '<img src="' + image + '" alt="" />';
     }
+    // win
+    if (password === password1) {
+        document.getElementById("alphabet").innerHTML = "Congratulations! You guessed the password: " + password + '<br/> <br/> <span class="reset" onclick="location.reload()">AGAIN?</span>';
+    }
 }
