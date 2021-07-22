@@ -6,6 +6,9 @@ let password1 = "";
 
 let missed_letters = 0;
 
+let yes = new Audio("resources/yes.wav");
+let no = new Audio("resources/no.wav");
+
 for (i = 0; i < length; i++) {
     if (password.charAt(i) === " ") {
         password1 = password1 + " ";
@@ -93,6 +96,7 @@ function checkLetter(number) {
         }
     }
     if (hit_letter === true) {
+        yes.play();
         let element = "letter" + number;
         document.getElementById(element).style.background = "#003300";
         document.getElementById(element).style.color = "#00c000";
@@ -101,6 +105,7 @@ function checkLetter(number) {
 
         write_password();
     } else {
+        no.play();
         let element = "letter" + number;
         document.getElementById(element).style.background = "#330000";
         document.getElementById(element).style.color = "#c00000";
